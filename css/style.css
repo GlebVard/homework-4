@@ -15,6 +15,14 @@ body {
   font-size: 14px;
 }
 
+/*conteiner*/
+.conteiner {
+  margin: 0 auto;
+  width: 1230px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 /*утилиты*/
 a {
   text-decoration: none;
@@ -24,13 +32,6 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.conteiner {
-  margin: 0 auto;
-  width: 1230px;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 /*logo*/
