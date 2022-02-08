@@ -94,15 +94,18 @@ a {
   margin-left: auto;
 }
 
-.site-contacts .item:not(:last-child) {
+.site-contacts .contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 
 .site-contacts .link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+
   color: var(--primary-text-color);
+
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.02em;
@@ -113,11 +116,43 @@ a {
   color: var(--accent-color);
 }
 
+.site-contacts .link::before {
+  content: "";
+  margin-right: 10px;
+  background-size: contain;
+}
+
+.link.icon-letter::before {
+  width: 16px;
+  height: 12px;
+  background-image: url("../img/envelope.svg");
+}
+
+.link.icon-telephone::before {
+  width: 10px;
+  height: 16px;
+  background-image: url("../img/smartphone.svg");
+}
+
 /*hero*/
 .hero {
-  margin-bottom: 107px;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 94px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   text-align: center;
-  background-color: #2F303A;
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ), url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #C4C4C4;
 }
 
 .hero-title {
@@ -165,8 +200,38 @@ a {
   display: flex;
   margin-bottom: 94px;
 }
-.features .item:not(:last-child) {
+.features .features-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.features-item::before {
+  display: inline-block;
+  content: '';
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: center;
+
+  background-color: #F5F4FA;
+}
+
+.features-item.icon-antenna::before {
+  background-image: url("../img/antenna.svg");
+}
+
+.features-item.icon-clock::before {
+  background-image: url("../img/clock.svg");
+}
+
+.features-item.icon-diagram::before {
+  background-image: url("../img/diagram.svg");
+}
+
+.features-item.icon-astronaut::before {
+  background-image: url("../img/astronaut.svg");
 }
 
 .features .title {
@@ -202,6 +267,9 @@ a {
 
 /*наша команда*/
 .team {
+  width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: #F5F4FA;
@@ -240,9 +308,13 @@ a {
 }
 
 /*footer*/
-footer {
+.footer {
+  width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 60px;
   padding-bottom: 60px;
+
   background-color: #2F303A;
 }
 
